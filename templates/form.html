@@ -1,0 +1,24 @@
+{% block content %}
+    <h1>Contact Your Representitive</h1>
+    <form action="" method="post" name="contact">
+        {{ form.hidden_tag() }}
+        <p>
+            Your Name:<br>
+            {{ form.user_name(size=80) }}<br>
+        </p>
+        <p>
+            Your Email Address:<br>
+            {{ form.user_email(size=80) }}<br>
+        </p>
+        <p>
+            Councilmen to Contact:<br>
+            {{ form.user_districts() }}<br>
+        </p>
+        <p>
+            Your Message:<br>
+            (The text "[Elected Official]" will be replaced with the name of each official.)
+            {{ form.user_message() }}<br>
+        </p>
+        <p><input type="submit" value="Send"></p>
+    </form>
+{% endblock %}
